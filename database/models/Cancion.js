@@ -5,10 +5,10 @@ module.exports = (sequelize, dataTypes) => {
 
         // INT PK NOT NULL
         id: {
-            allowNull: false,
+            allowNull: false, /*notNull Violation: Cancion.id cannot be null*/
             primaryKey: true,
-            /*autoIncrement: true, */ /*notNull Violation: Cancion.id cannot be null*/
-            type: dataTypes.INTEGER
+            autoIncrement: true,
+            type: dataTypes.INTEGER.UNSIGNED
         },
         // VARCHAR DEFAULT NULL
         titulo: {
