@@ -1,0 +1,28 @@
+{
+  "name": "musicando",
+  "version": "1.0.0",
+  "description": "_Esta base de datos está compuesta por las siguientes tablas_\r - Artistas\r - Canciones\r - Albumes\r - Generos",
+  "main": "app.js",
+  "scripts": {
+    "test": " nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abrilalvarez/Recu_musicando.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abrilalvarez/Recu_musicando/issues"
+  },
+  "homepage": "https://github.com/abrilalvarez/Recu_musicando#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.29.3"
+  }
+}

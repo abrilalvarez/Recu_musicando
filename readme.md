@@ -2,17 +2,17 @@
 
 ### Esta es la base de datos musicando, a continuación vas a ver como fue creada
 _Esta base de datos está compuesta por las siguientes tablas_
-- Artistas
-- Canciones
-- Albumes
-- Generos
+- Artistas > modelo listo
+- Canciones > modelo listo
+- Albumes > modelo listo
+- Generos > modelo listo
 
 _Las relaciones están definidas de la siguiente forma_
-- Una canción tiene un album
-- Un albun tiene muchas canciones
+- Una canción tiene un  > listo
+- Un albun tiene muchas canciones > listo
 
-- Una canción tiene un genero
-- Un genero tiene muchas canciones
+- Una canción tiene un genero > listo
+- Un genero tiene muchas canciones > listo
 
-- Una canción tiene un artista
-- Un artista tiene muchas canciones
+- Una canción tiene un artista > listo
+- Un artista tiene muchas canciones > listo
