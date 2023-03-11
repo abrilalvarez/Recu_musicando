@@ -8,8 +8,8 @@ _Esta base de datos está compuesta por las siguientes tablas_
 - Generos > modelo listo
 
 _Las relaciones están definidas de la siguiente forma_
-- Una canción tiene un  > listo
-- Un albun tiene muchas canciones > listo
+- Una canción tiene un album > listo
+- Un album tiene muchas canciones > listo
 
 - Una canción tiene un genero > listo
 - Un genero tiene muchas canciones > listo
