@@ -55,7 +55,7 @@ const cancionAPIController = {
                     meta: {
                         status: 200,
                         total: confirm.length,
-                        url: '/canciones/create'
+                        url: '/canciones'
                     },
                     data:confirm
                 }
@@ -64,7 +64,7 @@ const cancionAPIController = {
                     meta: {
                         status: 200,
                         total: confirm.length,
-                        url: '/canciones/create'
+                        url: '/canciones'
                     },
                     data:confirm
                 }
