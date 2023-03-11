@@ -7,15 +7,15 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             allowNull: false,
             primaryKey: true,
-            type: dataTypes.INTEGER.UNSIGNED
+            type: dataTypes.INTEGER(11).UNSIGNED
         },
         // VARCHAR DEFAULT NULL
         nombre: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         },
         // VARCHAR DEFAULT NULL
         apellido: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         }
     };
 

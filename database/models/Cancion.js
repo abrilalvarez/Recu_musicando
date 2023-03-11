@@ -8,32 +8,32 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false, /*notNull Violation: Cancion.id cannot be null*/
             primaryKey: true,
             autoIncrement: true,
-            type: dataTypes.INTEGER.UNSIGNED
+            type: dataTypes.INTEGER(11).UNSIGNED
         },
         // VARCHAR DEFAULT NULL
         titulo: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         },
         // INT DEFAULT NULL
         duracion: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER(11)
         },
         // INT NOT NULL
         generoId: {
             allowNull: false,
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
             field: 'genero_id',
         },
         // INT NOT NULL
         albumId: {
             allowNull: false,
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
             field: 'album_id',
         },
         // INT NOT NULL
         artistaId: {
             allowNull: false,
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
             field: 'artista_id',
         },
         // TIMESTAMP NULL DEFAULT NULL
