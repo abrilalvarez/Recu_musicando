@@ -24,7 +24,7 @@ const cancionAPIController = {
                     status: 200,
                     //información relacionada
                     total: canciones.length, //cantidad total
-                    url: '/canciones/' //endpoint
+                    url: '/canciones' //endpoint
                 },
                 //data
                 data: canciones //las canciones con sus correspondientes propiedades
@@ -33,11 +33,11 @@ const cancionAPIController = {
         .catch(error => { console.log('Error: ' + error)})
     },
 
-    //crear un nuevo registro de una canción > FUNCIONA
+    //crear un nuevo registro de una canción > FUNCIONA. 
+    //El id lo coloque como autoIncrement aunque no estuviera especificado en el script de la db porque sino no creaba el registro al testear con Postman
     create: (req, res) => {
         console.log('Creación de un registro en la tabla canciones');
         db.Cancion.create(
-            /*notNull Violation: Cancion.id cannot be null*/
             {
                 titulo: req.body.titulo,
                 duracion: req.body.duracion,
@@ -87,12 +87,12 @@ const cancionAPIController = {
         })
         .catch(error => { console.log('Error: ' + error)})
     },
-    //Editar una cancion (PUT) > NO FUNCIONA
+    //Editar una cancion (PUT) > FUNCIONA
     update: (req,res) => {
         console.log('Edición de un registro de la tabla canciones');
         let cancionId = req.params.id;
-        db.Cancion.update(
-            {
+        db.Cancion.update( //modifica datos o registros existentes. importante: se pisan los registros
+            { //en body del postman paso todos estos campos con sus respectivos valores
                 titulo: req.body.titulo,
                 duracion: req.body.duracion,
                 createdAt: req.body.createdAt,
@@ -100,7 +100,7 @@ const cancionAPIController = {
                 generoId: req.body.generoId,
                 albumId: req.body.albumId,
                 artistaId: req.body.artistaId
-            },
+            }, 
             {
                 where: {id: cancionId}
         })
@@ -108,8 +108,6 @@ const cancionAPIController = {
             let respuesta;
             if(confirm){
                 respuesta = {
-                    //muestra este meta (sin el total) y la data en 0 si modifico un solo campo. (hago get y no retorna la data editada)
-                    //muestra este meta con total=1 y la data en 1 si modifico todos los campos. (hago get y no retorna la data editada)
                     meta: {
                         status: 200,
                         total: confirm.length,
@@ -129,7 +127,7 @@ const cancionAPIController = {
             }
             return res.json(respuesta);
         })    
-        .catch(error => { console.log('Error: '+error)})
+        .catch(error => { console.log('Error: '+ error)})
     },
 
     //Eliminar una cancion (DELETE) > FUNCIONA
@@ -161,7 +159,7 @@ const cancionAPIController = {
             }
             return res.json(respuesta);
         })    
-        .catch(error => {console.log("Error: "+error)})
+        .catch(error => {console.log("Error: "+ error)})
     }
 
 }
