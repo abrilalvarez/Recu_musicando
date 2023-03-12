@@ -41,11 +41,11 @@ const cancionAPIController = {
             {
                 titulo: req.body.titulo,
                 duracion: req.body.duracion,
-                /*createdAt: req.body.createdAt,
-                updatedAt: req.body.updatedAt,*/
                 generoId: req.body.generoId,
                 albumId: req.body.albumId,
-                artistaId: req.body.artistaId
+                artistaId: req.body.artistaId,
+                createdAt: req.body.createdAt,
+                updatedAt: req.body.updatedAt,
             }
         )
         .then(confirm => {
@@ -87,7 +87,7 @@ const cancionAPIController = {
         })
         .catch(error => { console.log('Error: ' + error)})
     },
-    //Editar una cancion (PUT) >
+    //Editar una cancion (PUT) > NO FUNCIONA
     update: (req,res) => {
         console.log('Edición de un registro de la tabla canciones');
         let cancionId = req.params.id;
@@ -107,7 +107,9 @@ const cancionAPIController = {
         .then(confirm => {
             let respuesta;
             if(confirm){
-                respuesta ={
+                respuesta = {
+                    //muestra este meta (sin el total) y la data en 0 si modifico un solo campo. (hago get y no retorna la data editada)
+                    //muestra este meta con total=1 y la data en 1 si modifico todos los campos. (hago get y no retorna la data editada)
                     meta: {
                         status: 200,
                         total: confirm.length,
@@ -139,6 +141,7 @@ const cancionAPIController = {
             let respuesta;
             if(confirm){
                 respuesta = {
+                    //elimina, muestra este meta y la data en 1
                     meta: {
                         status: 200,
                         total: confirm.length,

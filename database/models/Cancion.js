@@ -5,10 +5,11 @@ module.exports = (sequelize, dataTypes) => {
 
         // INT PK NOT NULL
         id: {
-            allowNull: false, /*notNull Violation: Cancion.id cannot be null*/
+             /*notNull Violation: Cancion.id cannot be null*/
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true,
-            type: dataTypes.INTEGER(11).UNSIGNED
+            type: dataTypes.INTEGER(11)
         },
         // VARCHAR DEFAULT NULL
         titulo: {
@@ -36,6 +37,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11),
             field: 'artista_id',
         },
+        /*
         // TIMESTAMP NULL DEFAULT NULL
         createdAt: {
             field: 'created_at',
@@ -47,17 +49,16 @@ module.exports = (sequelize, dataTypes) => {
             field: 'updated_at',
             type: "TIMESTAMP",
             defaultValue: sequelize.literal("NULL"),
-        }
+        }*/
     };
 
     let config = {
         //nombre de la tabla en la db
         tableName: 'canciones',
-        //omite los atributos createdAt y updatedAt
-        timestamps: false,
-        /*
+        //añade los atributos createdAt y updatedAt
+        timestamps: true,
         createdAt: 'created_at',
-        updatedAt: 'updated_at'*/
+        updatedAt: 'updated_at'
     }
 
     const Cancion = sequelize.define(alias, cols, config);

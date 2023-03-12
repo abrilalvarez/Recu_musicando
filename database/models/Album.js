@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         // VARCHAR DEFAULT NULL
         duracion: {
-            type: dataTypes.INT(11)
+            type: dataTypes.INTEGER(11)
         },
     };
 

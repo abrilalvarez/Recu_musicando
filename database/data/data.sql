@@ -2,21 +2,21 @@ insert into albumes(id, nombre, duracion)
 values
     (   1,
         "The Car",
-        120
+        11
     ),
     (   2,
         "13",
-        180
+        10
     ),
     (
         3,
         "Cracker Island",
-        150
+        9
     ),
     (
         4,
         "Muta",
-        190
+        8
     );
 
 insert into artistas(id, nombre, apellido)
@@ -34,10 +34,10 @@ values
 insert into generos(id, name)
 values
 (
-    1, "Alternativo/independiente"
+    1, "Alternativo"
 ),
 (
-    2, "Rock alternativo"
+    2, "Rock Alternativo"
 ),
 (
     3, "Indie"
@@ -46,5 +46,5 @@ values
 insert into canciones(id, titulo, duracion, created_at, updated_at, genero_id, album_id, artista_id)
 values
 (
-    1, "Barro", 1680, NULL, NULL, 1, 4, 3
+    0, "Barro", 11, NULL, NULL, 1, 4, 3
 );

@@ -17,7 +17,7 @@ const cancionAPIController = require('../../controllers/api/cancionAPIController
 /* (id, titulo, duracion, created_at, updated_at, genero_id, album_id, artista_id) */
 router.get('/', cancionAPIController.list);
 
-//Crear un nuevo registro de una cancion LISTO (corregir: cuando se crea un registro el id decrementa)
+//Crear un nuevo registro de una cancion LISTO (corregir: si elimino todos los registros de la tabla, el id no comienza en 0. continua partiendo del ùltimo id generado)
 router.post('/', cancionAPIController.create);
 
 //Mostrar una canción LISTO
