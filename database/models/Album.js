@@ -2,7 +2,6 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Album";
 
     let cols = {
-
         // INT PK DEFAULT NULL
         id: {
             autoIncrement: true,

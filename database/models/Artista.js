@@ -2,7 +2,6 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Artista";
 
     let cols = {
-
         // INT PK NOT NULL
         id: {
             allowNull: false,

@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 
 const generoAPIController = {
 
-    //listado de los generos con sus propiedades (GET) > FUNCIONA
+    //listado de los generos con sus propiedades (GET)
     list: (req, res) => {
         console.log('Listado de los generos con sus respectivas propiedades');
         db.Genero.findAll(
@@ -22,7 +22,7 @@ const generoAPIController = {
                     status: 200,
                     //información relacionada
                     total: generos.length, //cantidad total
-                    url: '/generos/' //endpoint
+                    url: '/generos' //endpoint
                 },
                 //data
                 data: generos //los generos con sus correspondientes propiedades

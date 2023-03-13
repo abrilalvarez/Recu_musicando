@@ -2,7 +2,6 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Genero";
 
     let cols = {
-
         // INT PK NOT NULL
         id: {
             allowNull: false,

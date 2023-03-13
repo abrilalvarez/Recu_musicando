@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 
 const cancionAPIController = {
 
-    //listado de las canciones con sus propiedades (GET) > FUNCIONA
+    //listado de las canciones con sus propiedades (GET)
     list: (req, res) => {
         console.log('Listado de las canciones con sus respectivas propiedades');
         db.Cancion.findAll(
@@ -33,8 +33,8 @@ const cancionAPIController = {
         .catch(error => { console.log('Error: ' + error)})
     },
 
-    //crear un nuevo registro de una canción > FUNCIONA. 
-    //El id lo coloque como autoIncrement aunque no estuviera especificado en el script de la db porque sino no creaba el registro al testear con Postman
+    //crear un nuevo registro de una canción
+    //El id lo coloqué como autoIncrement y unsigned aunque no estuviera especificado en el script de la db porque sino no tomaba el id del registro creado (lo coloca en 0 si ya hay un registro con otro id antes o, si no hay ninguno, directamente no hace la petición).
     create: (req, res) => {
         console.log('Creación de un registro en la tabla canciones');
         db.Cancion.create(
@@ -74,7 +74,7 @@ const cancionAPIController = {
         .catch(error => {console.log('Error: ' + error)})
     },
 
-    //Mostrar una canción (GET) > FUNCIONA
+    //Mostrar una canción (GET)
     show: (req, res) => {
         console.log('Muestra del detalle de una canción');
         db.Cancion.findByPk(req.params.id)
@@ -87,7 +87,7 @@ const cancionAPIController = {
         })
         .catch(error => { console.log('Error: ' + error)})
     },
-    //Editar una cancion (PUT) > FUNCIONA
+    //Editar una cancion (PUT)
     update: (req,res) => {
         console.log('Edición de un registro de la tabla canciones');
         let cancionId = req.params.id;
@@ -130,7 +130,7 @@ const cancionAPIController = {
         .catch(error => { console.log('Error: '+ error)})
     },
 
-    //Eliminar una cancion (DELETE) > FUNCIONA
+    //Eliminar una cancion (DELETE)
     destroy: (req,res) => {
         console.log('Destrucción de un registro de la tabla canciones');
         let cancionId = req.params.id;

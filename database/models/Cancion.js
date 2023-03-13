@@ -2,14 +2,12 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Cancion";
 
     let cols = {
-
         // INT PK NOT NULL
         id: {
-             /*notNull Violation: Cancion.id cannot be null*/
             primaryKey: true,
             allowNull: false,
             autoIncrement: true,
-            type: dataTypes.INTEGER(11)
+            type: dataTypes.INTEGER(11).UNSIGNED
         },
         // VARCHAR DEFAULT NULL
         titulo: {
@@ -49,7 +47,8 @@ module.exports = (sequelize, dataTypes) => {
             field: 'updated_at',
             type: "TIMESTAMP",
             defaultValue: sequelize.literal("NULL"),
-        }*/
+        }
+        */
     };
 
     let config = {

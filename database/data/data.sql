@@ -1,50 +1,51 @@
 insert into albumes(id, nombre, duracion)
 values
     (   1,
-        "The Car",
+        "Let Go",
         11
     ),
     (   2,
-        "13",
+        "Sin Miedo (del Amor y otros Demonios)",
         10
     ),
     (
         3,
-        "Cracker Island",
+        "Kaya",
         9
-    ),
-    (
-        4,
-        "Muta",
-        8
     );
 
 insert into artistas(id, nombre, apellido)
 values
     (
-        1,"Damon","Albarn"
+        1,"Avril","Lavigne"
     ),
     (
-        2, "Alex", "Turner"
+        2, "Kali", "Uchis"
     ),
     (
-        3, "Perota", "Chingo"
+        3, "Bob", "Marley"
     );
 
 insert into generos(id, name)
 values
 (
-    1, "Alternativo"
+    1, "Rock Alternativo"
 ),
 (
-    2, "Rock Alternativo"
+    2, "R&B"
 ),
 (
-    3, "Indie"
+    3, "Reggae"
 );
 
 insert into canciones(id, titulo, duracion, created_at, updated_at, genero_id, album_id, artista_id)
 values
 (
-    0, "Barro", 11, NULL, NULL, 1, 4, 3
+    1, "Complicated", 11, NULL, NULL, 1, 1, 1
+),
+(
+    2, "Is This Love", 10, NULL, NULL, 3, 3, 3
+),
+(
+    3, "vaya con dios", 9, NULL, NULL, 2, 2, 2
 );
