@@ -76,7 +76,7 @@ DROP TABLE IF EXISTS `canciones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `canciones` (
-  `id` int(11) NOT NULL UNSIGNED AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(45) DEFAULT NULL,
   `duracion` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
