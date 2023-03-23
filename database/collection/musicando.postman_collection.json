@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "7d805e02-ecdb-4267-b420-d0a374aeac5e",
+		"name": "musicando",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25141526"
+	},
+	"item": [
+		{
+			"name": "GET generos list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titulo",
+							"value": "Lolita",
+							"type": "text"
+						},
+						{
+							"key": "duracion",
+							"value": "120",
+							"type": "text"
+						},
+						{
+							"key": "generoId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "albumId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "artistaId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/generos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"generos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET canciones list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/canciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"canciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST canciones create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titulo",
+							"value": "BLUE",
+							"type": "text"
+						},
+						{
+							"key": "duracion",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "generoId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "albumId",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "artistaId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/canciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"canciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET canciones show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/canciones/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"canciones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE canciones destroy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titulo",
+							"value": "Lalala",
+							"type": "text"
+						},
+						{
+							"key": "duracion",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "generoId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "albumId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "artistaId",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/canciones/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"canciones",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT canciones update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titulo",
+							"value": "Lalaland",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "duracion",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "generoId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "albumId",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "artistaId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/canciones/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"canciones",
+						"2"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "LALALAND",
+							"disabled": true
+						},
+						{
+							"key": "duracion",
+							"value": "11",
+							"disabled": true
+						},
+						{
+							"key": "generoId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "albumId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "artistaId",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
